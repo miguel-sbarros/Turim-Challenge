@@ -1,0 +1,17 @@
+{
+  "$comment": "KIT: required, enum de informacoes_ausentes, segmentacao opcional com examples turim/tori (README). PALPITE: os tipos (number/boolean/string). O schema real chega na chamada do Juiz.",
+  "type": "object",
+  "required": ["patrimonio_total", "parcela_imobilizada_pct", "renda_fazenda_anual", "gasto_familia_anual", "informacoes_ausentes", "justificativa"],
+  "properties": {
+    "patrimonio_total": { "type": "number" },
+    "parcela_imobilizada_pct": { "type": "number" },
+    "renda_fazenda_anual": { "type": "number" },
+    "gasto_familia_anual": { "type": "number" },
+    "informacoes_ausentes": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["perfil_risco_declarado", "gasto_anual_filha", "custo_da_casa", "gasto_anual_familia", "cesta_de_moedas", "custo_aquisicao_fazenda", "idade_do_pai", "renda_anual_da_fazenda", "avaliacao_da_fazenda", "liquidez_financeira", "valor_da_doacao_a_filha"] }
+    },
+    "segmentacao": { "type": "string", "examples": ["turim", "tori"] },
+    "justificativa": { "type": "string" }
+  }
+}

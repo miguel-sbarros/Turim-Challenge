@@ -1,0 +1,6 @@
+{"carteiras": [
+ {"titular": "pai", "mercado": "onshore", "renda_fixa_pct": 90, "renda_variavel_pct": 10, "drawdown_pct": 3.25},
+ {"titular": "pai", "mercado": "offshore", "renda_fixa_pct": 90, "renda_variavel_pct": 10, "drawdown_pct": 5.05},
+ {"titular": "filha", "mercado": "onshore", "renda_fixa_pct": 80, "renda_variavel_pct": 20, "drawdown_pct": 7.82},
+ {"titular": "filha", "mercado": "offshore", "renda_fixa_pct": 80, "renda_variavel_pct": 20, "drawdown_pct": 11.05}],
+ "justificativa": "teste"}

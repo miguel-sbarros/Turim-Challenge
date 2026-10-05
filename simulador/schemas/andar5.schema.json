@@ -1,0 +1,11 @@
+{
+  "$comment": "KIT: required (README). PALPITE: tipos.",
+  "type": "object",
+  "required": ["perfil_pai", "perfil_filha", "manteve_posicao", "justificativa"],
+  "properties": {
+    "perfil_pai": { "type": "string", "examples": ["conservador", "moderado", "agressivo"] },
+    "perfil_filha": { "type": "string", "examples": ["conservador", "moderado", "agressivo"] },
+    "manteve_posicao": { "type": "boolean" },
+    "justificativa": { "type": "string" }
+  }
+}

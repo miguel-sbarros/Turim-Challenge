@@ -1,0 +1,20 @@
+{
+  "$comment": "KIT: required slides (README); capa, sumario, exatamente 15 de conteudo, cinco secoes (andar6.md-ex, enunciado p.3). PALPITE: formato de cada slide.",
+  "type": "object",
+  "required": ["slides"],
+  "properties": {
+    "slides": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["tipo", "titulo", "conteudo"],
+        "properties": {
+          "tipo": { "type": "string", "examples": ["capa", "sumario", "conteudo", "anexo"] },
+          "secao": { "type": "string", "examples": ["quem e a familia", "viver do patrimonio", "perfil de risco", "alocacao", "sucessao"] },
+          "titulo": { "type": "string" },
+          "conteudo": { "type": "string" }
+        }
+      }
+    }
+  }
+}

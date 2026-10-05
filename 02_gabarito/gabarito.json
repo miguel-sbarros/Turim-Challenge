@@ -1,0 +1,37 @@
+{
+  "_leia": "Valores em reais (o kit nao fixa a unidade; o simulador aceita reais ou R$ milhoes e avisa qual veio). So entra aqui o que sai do dossie sem decisao da dupla. 'pendente' = depende de decisao em decisoes.md.",
+  "andar2": {
+    "patrimonio_total": { "valor": 400000000, "conta": "100 mi liquidez + 300 mi fazenda", "fonte": "dossie/patrimonio" },
+    "parcela_imobilizada_pct": { "valor": 75, "conta": "300 / 400", "fonte": "dossie/patrimonio" },
+    "renda_fazenda_anual": { "valor": 10000000, "conta": "escrito", "fonte": "dossie/patrimonio" },
+    "gasto_familia_anual": { "valor": 10000000, "conta": "escrito, ja inclui a filha", "fonte": "dossie/familia" },
+    "informacoes_ausentes": {
+      "ausentes_de_fato": {
+        "perfil_risco_declarado": "nenhum documento traz o perfil declarado; o enunciado p.2 diz que so aparece se o agente perguntar",
+        "gasto_anual_filha": "enunciado p.2: 'quanto a filha gasta por ano depois de separar o patrimonio' esta entre os dados ausentes",
+        "custo_da_casa": "enunciado p.2: 'um custo que ninguem menciona: o da propria casa'; governanca item 3 cita o custo, sem valor"
+      },
+      "iscas_material_entrega": {
+        "liquidez_financeira": "patrimonio: R$ 100 milhoes",
+        "avaliacao_da_fazenda": "patrimonio: R$ 300 milhoes",
+        "custo_aquisicao_fazenda": "patrimonio: R$ 20 milhoes",
+        "renda_anual_da_fazenda": "patrimonio: R$ 10 milhoes por ano",
+        "gasto_anual_familia": "familia: R$ 10 milhoes",
+        "idade_do_pai": "familia: 60 anos",
+        "valor_da_doacao_a_filha": "familia: R$ 25 milhoes",
+        "cesta_de_moedas": "familia: filha 50/50, familia 80/20"
+      }
+    },
+    "segmentacao": { "valor": "pendente", "nota": "o Juiz nao revela; decisao da dupla" }
+  },
+  "andar3": {
+    "produto_liquido_venda": { "valor": 258000000, "conta": "300 - 15% x (300 - 20) = 300 - 42", "fonte": "dossie/premissas" },
+    "renda_perpetua_real_anual": { "valor": "pendente", "nota": "o kit cobra coerencia com retorno_nominal_premissa_pct declarado; base patrimonial e convencao (subtrair inflacao ou dividir) sao decisao da dupla. O simulador so reporta a taxa implicita." },
+    "perfis_e_offshore": { "valor": "pendente", "nota": "dependem das respostas da familia (enunciado p.2)" }
+  },
+  "andar4": {
+    "classes_por_carteira": { "valor": 100, "conta": "renda fixa + renda variavel = 100%", "fonte": "dossie/premissas" },
+    "carteiras_esperadas": { "valor": ["pai/onshore", "pai/offshore", "filha/onshore", "filha/offshore"], "fonte": "andar4.md-ex" },
+    "drawdown": { "valor": "calculado", "nota": "o simulador recalcula da planilha com os pesos declarados (rebalanceamento mensal; onshore CDI+IBOV em R$; offshore SOFR+SPX em US$ e tambem em R$). A convencao exata do Juiz nao esta escrita: tolerancia de 0,5 p.p." }
+  }
+}

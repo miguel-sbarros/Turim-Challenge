@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$comment": "Transcrito do README do kit ('Os campos da raiz', 'Os campos de cada andar', 'O schema e fechado'). O schema oficial nao vem no kit.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["nome", "descricao", "andares"],
+  "properties": {
+    "nome": { "type": "string", "minLength": 1, "maxLength": 80 },
+    "descricao": {
+      "type": "string",
+      "minLength": 40,
+      "not": { "const": "EXEMPLO — TROQUE ESTE TEXTO: diga em uma frase o que o SEU agente faz, para quem, e com que material. O Andar 1 recusa esta descricao exatamente como ela esta." }
+    },
+    "andares": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["2", "3", "4", "5", "6"],
+      "properties": {
+        "2": { "$ref": "#/$defs/andar" },
+        "3": { "$ref": "#/$defs/andar" },
+        "4": { "$ref": "#/$defs/andar" },
+        "5": { "$ref": "#/$defs/andar" },
+        "6": { "$ref": "#/$defs/andar" }
+      }
+    }
+  },
+  "$defs": {
+    "andar": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["prompt"],
+      "properties": {
+        "prompt": { "type": "string", "minLength": 1 },
+        "saida": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

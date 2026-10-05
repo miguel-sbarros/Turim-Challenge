@@ -1,0 +1,22 @@
+{
+  "$comment": "KIT: required carteiras/justificativa (README); uma onshore e uma offshore por titular, duas classes somando 100%, drawdown declarado (andar4.md-ex, premissas). PALPITE: todo o formato interno de cada carteira.",
+  "type": "object",
+  "required": ["carteiras", "justificativa"],
+  "properties": {
+    "carteiras": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["titular", "mercado", "renda_fixa_pct", "renda_variavel_pct", "drawdown_pct"],
+        "properties": {
+          "titular": { "type": "string", "examples": ["pai", "filha"] },
+          "mercado": { "type": "string", "examples": ["onshore", "offshore"] },
+          "renda_fixa_pct": { "type": "number" },
+          "renda_variavel_pct": { "type": "number" },
+          "drawdown_pct": { "type": "number", "description": "queda maxima da serie historica com estes pesos, em %" }
+        }
+      }
+    },
+    "justificativa": { "type": "string" }
+  }
+}

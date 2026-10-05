@@ -1,0 +1,17 @@
+{
+  "$comment": "KIT: required (README). PALPITE: tipos; perfis com os rotulos da tabela PERFIL DE RISCO do enunciado (p.2) em examples.",
+  "type": "object",
+  "required": ["renda_perpetua_real_anual", "retorno_nominal_premissa_pct", "venda_fazenda_recomendada", "produto_liquido_venda", "perfil_pai", "perfil_filha", "offshore_pai_pct", "offshore_filha_pct", "filha_sustenta_padrao", "justificativa"],
+  "properties": {
+    "renda_perpetua_real_anual": { "type": "number" },
+    "retorno_nominal_premissa_pct": { "type": "number" },
+    "venda_fazenda_recomendada": { "type": "boolean" },
+    "produto_liquido_venda": { "type": "number" },
+    "perfil_pai": { "type": "string", "examples": ["conservador", "moderado", "agressivo"] },
+    "perfil_filha": { "type": "string", "examples": ["conservador", "moderado", "agressivo"] },
+    "offshore_pai_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "offshore_filha_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+    "filha_sustenta_padrao": { "type": "boolean" },
+    "justificativa": { "type": "string" }
+  }
+}
