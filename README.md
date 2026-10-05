@@ -1,2 +1,2 @@
 # Turim-Challenge
-CC Strategy : Miggy and Diddy
+CC Strategy : Miggy and (P)Diddy
